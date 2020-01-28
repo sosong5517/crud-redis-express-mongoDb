@@ -12,6 +12,8 @@ A backend application using Node.js with the Express framework, that implements 
 | ------ | ------ |
 | express | 4.16.4 |
 | mongoose | 5.4.17 |
+| redis    | ^2.8.0 |
+ 
 
 ---
 
