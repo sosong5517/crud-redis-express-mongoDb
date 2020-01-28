@@ -2,7 +2,7 @@
 
 # CRUD API w/ Express.js and MongoDB and redis
 
-A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB.
+A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB and redis.
 
 ---
 
