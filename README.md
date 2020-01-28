@@ -78,11 +78,11 @@ url: "/server/to-do/set-as-pending/:ID"
 ```sh
 method: "DELETE"
 url: "/server/to-do/remove"
-```
+
 body: {
         "noTelp":<string>
-
 }
+```
 
 
 * Delete all to-do itens
