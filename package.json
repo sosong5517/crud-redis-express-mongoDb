@@ -1,0 +1,30 @@
+{
+  "name": "crud-api-express-mongo",
+  "version": "1.0.0",
+  "description": "A simple backend application using Node JS with the Express framework, that implements a simple CRUD with the MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduardoRotundaro/crud-api-express-mongo.git"
+  },
+  "keywords": [],
+  "author": "Eduardo Henrique Rotundaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EduardoRotundaro/crud-api-express-mongo/issues"
+  },
+  "homepage": "https://github.com/EduardoRotundaro/crud-api-express-mongo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "helmet": "^3.21.2",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.4.17",
+    "redis": "^2.8.0"
+  }
+}
