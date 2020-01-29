@@ -1,8 +1,8 @@
 ![](https://github.com/EduardoRotundaro/crud-api-express-mongo/blob/master/docs/images/01.png?raw=true)
 
-# CRUD API w/ Express.js and MongoDB
+# CRUD API w/ Express.js and MongoDB and redis
 
-A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB.
+A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB and redis.
 
 ---
 
@@ -12,6 +12,8 @@ A backend application using Node.js with the Express framework, that implements 
 | ------ | ------ |
 | express | 4.16.4 |
 | mongoose | 5.4.17 |
+| redis    | ^2.8.0 |
+ 
 
 ---
 
@@ -46,6 +48,7 @@ method: "POST"
 url: "/server/to-do/new"
 body: {
     "description": <String>
+    "noTelp":<string>
 }
 ```
 
@@ -55,6 +58,7 @@ method: "PUT"
 url: "/server/to-do/edit-description/:ID"
 body: {
     "description": <String>
+    "noTelp":<string>
 }
 ```
 
@@ -73,8 +77,13 @@ url: "/server/to-do/set-as-pending/:ID"
 * Delete a to-do item
 ```sh
 method: "DELETE"
-url: "/server/to-do/remove/:ID"
+url: "/server/to-do/remove"
+
+body: {
+        "noTelp":<string>
+}
 ```
+
 
 * Delete all to-do itens
 ```sh
