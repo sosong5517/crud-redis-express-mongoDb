@@ -26,7 +26,16 @@ const login = function (membershipRepository) {
         });
     }
 };
+const getMe = function(membershipRepository){
+    return function(req, res, next){
+      let id = parseInt(req.memberId);
+      membershipRepository.load(id, result => {
+        res.json(result);
+      });
+    };
+  };
 
 module.exports = {
-    login: login
+    login: login,
+    getMe
 }
