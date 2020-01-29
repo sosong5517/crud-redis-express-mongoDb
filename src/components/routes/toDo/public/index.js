@@ -1,9 +1,19 @@
 const BASE = '/to-do/'
-
-const responseObject = require('../../../../utils/responseObject')
-const toDoCore = require('../../../core/toDo')
+const Membership = require('../../../../modules/membership/Model/Membership');
+const responseObject = require('../../../../utils/responseObject');
+const toDoCore = require('../../../core/toDo');
+const membershipHandler = require('../../../../modules/membership/handler/handler');
+const MembershipRepository = require('../../../../modules/membership/repository/MembershipRepository');
 
 module.exports = (app) => {
+    // fake membership db
+    let db = new Map();
+    db.set(1, new Membership(1, 'Wuriyanto', 'Musobar', 'wuriyanto@yahoo.co.id', '123456'));
+    db.set(2, new Membership(2, 'Alex', 'Xander', 'alex@yahoo.co.id', '123456'));
+
+    const membershipRepository = new MembershipRepository(db);
+
+    app.post('/auth', membershipHandler.login(membershipRepository));
 
     app.post(`${BASE}new`, async function (req, res, next) {
 
