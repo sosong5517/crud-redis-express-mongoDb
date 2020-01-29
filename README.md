@@ -1,6 +1,6 @@
 ![](https://github.com/EduardoRotundaro/crud-api-express-mongo/blob/master/docs/images/01.png?raw=true)
 
-# CRUD API w/ Express.js and MongoDB and redis
+# CRUD API with Express.js,MongoDB and Redis
 
 A backend application using Node.js with the Express framework, that implements a simple CRUD with the MongoDB and redis.
 
